@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Core — The Learning Space · 5-Day Inquiry Program · Ahmedabad</title>
+<meta name="description" content="Core is a 5-day inquiry-based learning program for children in Ahmedabad. Holistic, personalised, and free for government school students. Aligned with NEP 2020 and NCF 2023.">
+<meta name="keywords" content="inquiry based learning, IBL, education NGO, Ahmedabad, NEP 2020, holistic learning, Core Learning Space">
+<meta name="author" content="Core — The Learning Space">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Core — The Learning Space · Inquiry-Based Learning">
+<meta property="og:description" content="A 5-day immersive learning space where every child's curiosity becomes the curriculum. Free for government school students. NEP 2020 aligned.">
+<meta property="og:url" content="https://corethelearningspace.org">
+<meta property="og:site_name" content="Core — The Learning Space">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Core — The Learning Space">
+<meta name="twitter:description" content="5-day inquiry-based learning. Free for government school students. NEP 2020 aligned. Ahmedabad, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,900&family=Unbounded:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ════════════════════════════════════════════════
+   ACCESSIBILITY — skip link
+════════════════════════════════════════════════ */
+.skip-link {
+  position: absolute; top: -100px; left: 16px;
+  background: var(--ink); color: var(--gold);
+  padding: 8px 16px; font-family: var(--f-mono);
+  font-size: 12px; font-weight: 700; text-decoration: none;
+  z-index: 9000; border: var(--b);
+  transition: top .2s;
+}
+.skip-link:focus { top: 8px; }
+
+/* ════════════════════════════════════════════════
+   NOSCRIPT FALLBACK — reveal elements visible
+   when JS is disabled or hasn't loaded yet
+════════════════════════════════════════════════ */
+@media (scripting: none) {
+  .reveal, .reveal-left, .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ════════════════════════════════════════════════
+   RESET & TOKENS
+════════════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  /* Palette — all bright */
+  --cream:   #FBF7EE;
+  --gold:    #F5C842;
+  --teal:    #00A99D;
+  --rust:    #E8460A;
+  --sage:    #7BBF8A;
+  --blue:    #2454D4;
+  --peach:   #FFDDCC;
+  --lemon:   #FFF176;
+  --mintbg:  #E6F5EC;
+  --tealbg:  #DFF5F3;
+  --goldbg:  #FFF8DC;
+  --rustbg:  #FFF0EB;
+  --bluebg:  #EAF0FF;
+  --ink:     #141414;
+  --ink2:    rgba(20,20,20,0.55);
+
+  --f-display: 'Fraunces', Georgia, serif;
+  --f-block:   'Unbounded', sans-serif;
+  --f-serif:   'Instrument Serif', Georgia, serif;
+  --f-mono:    'Courier Prime', monospace;
+
+  --b: 2.5px solid var(--ink);
+  --bt: 3.5px solid var(--ink);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--f-mono);
+  overflow-x: hidden;
+}
+
+/* Paper texture overlay */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background: var(--gold); }
+::-webkit-scrollbar-thumb { background: var(--ink); }
+
+/* ════════════════════════════════════════════════
+   REVEAL ANIMATIONS
+════════════════════════════════════════════════ */
+.reveal { opacity:0; transform:translateY(36px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.up { opacity:1; transform:translateY(0); }
+.reveal-left { opacity:0; transform:translateX(-36px); transition: opacity .7s ease, transform .7s ease; }
+.reveal-left.up { opacity:1; transform:translateX(0); }
+.reveal-scale { opacity:0; transform:scale(0.93); transition: opacity .6s ease, transform .6s ease; }
+.reveal-scale.up { opacity:1; transform:scale(1); }
+
+/* ════════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════════ */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:800;
+  background: var(--gold);
+  border-bottom: var(--bt);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 58px;
+}
+
+.nav-logo {
+  font-family: var(--f-block);
+  font-size: 15px; font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 10px;
+}
+
+/* Orbital mark */
+.logo-orbit {
+  width: 30px; height: 30px; position: relative;
+  flex-shrink: 0;
+}
+.logo-orbit svg { width:100%; height:100%; }
+
+.nav-links {
+  display: flex; align-items: center;
+  list-style: none; height: 100%; gap: 0;
+}
+.nav-links li a {
+  display: flex; align-items: center;
+  height: 58px; padding: 0 18px;
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+  border-left: 1.5px solid rgba(20,20,20,0.15);
+  transition: background .18s;
+}
+.nav-links li a:hover { background: rgba(20,20,20,0.08); }
+
+.nav-cta {
+  background: var(--ink); color: var(--gold);
+  border: none; padding: 10px 22px;
+  font-family: var(--f-mono); font-size: 11px;
+  font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; cursor: pointer;
+  transition: background .18s, color .18s;
+  border-left: var(--bt);
+  height: 58px;
+}
+.nav-cta:hover { background: var(--rust); color: #fff; }
+
+/* ════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════ */
+#hero {
+  margin-top: 58px;
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-template-rows: 1fr auto;
+  min-height: calc(100vh - 58px);
+  border-bottom: var(--bt);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Big decorative background letter */
+.hero-bg-letter {
+  position: absolute;
+  font-family: var(--f-block);
+  font-size: clamp(280px, 32vw, 520px);
+  font-weight: 900;
+  color: rgba(0,169,157,0.06);
+  top: -40px; right: -40px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.hero-left {
+  grid-column: 1; grid-row: 1;
+  padding: 72px 56px 56px 56px;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  border-right: var(--bt);
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating tag */
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--teal); color: #fff;
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 7px 14px; border: var(--b);
+  margin-bottom: 28px;
+  width: fit-content;
+  animation: tagPop .6s .1s both cubic-bezier(.34,1.56,.64,1);
+}
+.hero-tag::before {
+  content: '★'; font-size: 9px;
+}
+
+@keyframes tagPop {
+  from { opacity:0; transform: scale(.8) translateY(-8px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+
+.hero-h1 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(44px, 6vw, 92px);
+  line-height: 1.0; letter-spacing: -0.025em;
+  margin-bottom: 28px;
+  animation: fadeUp .9s .25s both ease;
+}
+
+.hero-h1 .word-learning {
+  color: var(--teal);
+  position: relative; display: inline-block;
+}
+.hero-h1 .word-learning::after {
+  content: '';
+  position: absolute; left: 0; bottom: 2px;
+  width: 100%; height: 5px;
+  background: var(--gold);
+  z-index: -1;
+}
+
+.hero-h1 .word-fits {
+  color: var(--rust);
+  font-style: normal;
+}
+
+.hero-desc {
+  font-family: var(--f-mono);
+  font-size: 14px; line-height: 1.9;
+  color: var(--ink2); max-width: 440px;
+  margin-bottom: 40px;
+  animation: fadeUp .9s .4s both ease;
+}
+
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  animation: fadeUp .9s .55s both ease;
+}
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px; font-family: var(--f-mono);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; border: var(--b);
+  cursor: pointer; transition: all .18s;
+}
+.btn-fill   { background: var(--ink); color: var(--cream); }
+.btn-fill:hover { background: var(--teal); border-color: var(--teal); color:#fff; transform: translateY(-2px); }
+.btn-gold   { background: var(--gold); color: var(--ink); }
+.btn-gold:hover { background: var(--rust); color:#fff; border-color:var(--rust); transform: translateY(-2px); }
+.btn-outline { background: transparent; color: var(--ink); }
+.btn-outline:hover { background: var(--gold); }
+
+/* Hero right — illustrated colorful panel */
+.hero-right {
+  grid-column: 2; grid-row: 1 / 3;
+  background: var(--teal);
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+}
+
+/* Diagonal stripe pattern */
+.hero-right::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0px, transparent 28px,
+    rgba(255,255,255,0.04) 28px, rgba(255,255,255,0.04) 30px
+  );
+  pointer-events: none;
+}
+
+.hero-orbit-display {
+  flex: 1; display: flex;
+  align-items: center; justify-content: center;
+  position: relative;
+}
+
+/* Giant orbit rings */
+.orbit-wrap {
+  position: relative;
+  width: 320px; height: 320px;
+}
+
+.o-ring {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.o-ring-1 { width:100px; height:100px; animation: spinCW 12s linear infinite; }
+.o-ring-2 { width:200px; height:200px; animation: spinCCW 20s linear infinite; }
+.o-ring-3 { width:310px; height:310px; animation: spinCW 32s linear infinite; }
+
+.o-dot {
+  width:10px; height:10px; border-radius:50%;
+  position:absolute; top:0; left:50%;
+  transform:translate(-50%,-50%);
+}
+.o-dot-gold { background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+.o-dot-rust { background: var(--rust); box-shadow: 0 0 12px var(--rust); }
+.o-dot-cream { background: var(--cream); }
+
+.o-center {
+  position: absolute; top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  width: 90px; height: 90px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.o-center-label {
+  font-family: var(--f-block);
+  font-size: 11px; font-weight: 900;
+  letter-spacing: 0.12em; color: var(--ink);
+  line-height: 1.3; text-align: center;
+}
+
+@keyframes spinCW  { to { transform: translate(-50%,-50%) rotate(360deg);  } }
+@keyframes spinCCW { to { transform: translate(-50%,-50%) rotate(-360deg); } }
+
+/* Floating decorative chips on hero right */
+.hero-chip {
+  position: absolute;
+  background: var(--cream);
+  border: var(--b);
+  padding: 8px 14px;
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink);
+  white-space: nowrap;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+}
+.chip-1 { top: 14%; left: 12%; animation: chipFloat 5s ease-in-out infinite; }
+.chip-2 { top: 22%; right: 10%; animation: chipFloat 5s 1.2s ease-in-out infinite; }
+.chip-3 { bottom: 28%; left: 8%;  animation: chipFloat 5s 2.4s ease-in-out infinite; }
+.chip-4 { bottom: 20%; right: 12%; animation: chipFloat 5s .6s ease-in-out infinite; }
+
+@keyframes chipFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Stats bar at bottom of right panel */
+.hero-stats {
+  background: var(--gold);
+  border-top: var(--bt);
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+}
+.h-stat {
+  padding: 18px 22px;
+  border-right: var(--b);
+}
+.h-stat:last-child { border-right: none; }
+.h-stat-n {
+  font-family: var(--f-block);
+  font-size: 32px; font-weight: 900;
+  line-height: 1; color: var(--ink);
+}
+.h-stat-l {
+  font-family: var(--f-mono);
+  font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink2);
+  margin-top: 4px;
+}
+
+/* Marquee strip */
+.marquee-strip {
+  grid-column: 1; grid-row: 2;
+  background: var(--rust);
+  border-right: var(--bt);
+  border-top: var(--bt);
+  overflow: hidden;
+  height: 52px; display: flex; align-items: center;
+}
+.marquee-inner {
+  display: flex; gap: 48px;
+  animation: marquee 18s linear infinite;
+  white-space: nowrap;
+}
+.marquee-item {
+  font-family: var(--f-block);
+  font-size: 13px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--cream);
+  display: flex; align-items: center; gap: 16px;
+  flex-shrink: 0;
+}
+.marquee-item::after { content:'◆'; font-size:8px; color:var(--gold); }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ════════════════════════════════════════════════
+   SECTION SHARED
+════════════════════════════════════════════════ */
+.sec-eyebrow {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.sec-eyebrow::before {
+  content: ''; display: block;
+  width: 24px; height: 2px;
+  background: currentColor;
+}
+
+.sec-h2 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  line-height: 1.05; letter-spacing: -0.025em;
+  font-size: clamp(32px, 4.5vw, 68px);
+}
+
+.sec-body {
+  font-family: var(--f-mono); font-size: 13.5px;
+  line-height: 1.85; color: var(--ink2);
+}
+
+/* ════════════════════════════════════════════════
+   ABOUT — cream bg, geometric grid
+════════════════════════════════════════════════ */
+#about {
+  background: var(--goldbg);
+  border-bottom: var(--bt);
+  display: grid;
+  grid-template-columns: 340px 1fr;
+}
+
+.about-left {
+  padding: 64px 40px;
+  border-right: var(--bt);
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  background: var(--gold);
+  position: relative; overflow: hidden;
+}
+
+/* Big decorative number */
+.about-left-bg {
+  position: absolute; bottom: -20px; right: -10px;
+  font-family: var(--f-block); font-size: 180px;
+  font-weight: 900; color: rgba(20,20,20,0.07);
+  line-height: 1; pointer-events: none; user-select: none;
+}
+
+.about-num {
+  font-family: var(--f-block);
+  font-size: 13px; font-weight: 900;
+  letter-spacing: 0.15em; color: var(--ink);
+  border: var(--b); padding: 6px 12px;
+  width: fit-content;
+}
+
+.about-left-title {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.05; letter-spacing: -0.02em;
+}
+
+.about-right {
+  padding: 64px 56px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 48px;
+}
+
+.about-quote {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: clamp(22px, 2.5vw, 34px);
+  line-height: 1.35; letter-spacing: -0.01em;
+  border-left: 5px solid var(--teal);
+  padding-left: 24px;
+  color: var(--ink);
+}
+
+.about-body-wrap {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.about-values {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: var(--b);
+}
+
+.val-item {
+  padding: 20px 18px;
+  border-right: var(--b); border-bottom: var(--b);
+  transition: background .2s;
+}
+.val-item:nth-child(2n) { border-right: none; }
+.val-item:nth-last-child(-n+2) { border-bottom: none; }
+.val-item:hover { background: var(--lemon); }
+
+.val-icon { font-size: 20px; margin-bottom: 6px; }
+.val-name {
+  font-family: var(--f-block); font-size: 12px;
+  letter-spacing: 0.07em; margin-bottom: 4px;
+}
+.val-desc {
+  font-family: var(--f-mono); font-size: 10px;
+  line-height: 1.55; color: var(--ink2);
+}
+
+/* ════════════════════════════════════════════════
+   PROGRAM — TEAL BG (bright, not dark)
+════════════════════════════════════════════════ */
+#program {
+  background: var(--tealbg);
+  border-bottom: var(--bt);
+  padding: 80px 56px;
+}
+
+.program-header {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: var(--b);
+  align-items: end;
+}
+
+.program-h2 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(36px, 5.5vw, 80px);
+  line-height: 1.05; letter-spacing: -0.025em;
+}
+.program-h2 em { font-style: normal; color: var(--teal); }
+
+.program-desc {
+  font-family: var(--f-mono); font-size: 13px;
+  line-height: 1.85; color: var(--ink2);
+}
+
+/* 5-day arc */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0; border: var(--b);
+  background: var(--b);
+}
+
+.day-col {
+  background: var(--cream);
+  border-right: var(--b);
+  padding: 36px 24px 28px;
+  position: relative; overflow: hidden;
+  transition: background .22s, transform .22s;
+}
+.day-col:last-child { border-right: none; }
+.day-col:hover { background: var(--gold); transform: translateY(-4px); z-index: 2; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+
+.day-bg-n {
+  position: absolute; top: -10px; right: -4px;
+  font-family: var(--f-block); font-size: 80px;
+  font-weight: 900; color: rgba(0,169,157,0.07);
+  line-height: 1; pointer-events: none;
+}
+
+.day-color-bar {
+  width: 100%; height: 4px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.day-weekday {
+  font-family: var(--f-mono); font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink2); margin-bottom: 8px;
+}
+
+.day-name {
+  font-family: var(--f-block); font-size: 20px;
+  letter-spacing: 0.04em; margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.day-text {
+  font-family: var(--f-mono); font-size: 11px;
+  line-height: 1.8; color: var(--ink2);
+}
+
+/* Interest groups */
+.ig-wrap { margin-top: 56px; }
+.ig-label {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink2); margin-bottom: 18px;
+  padding-bottom: 14px; border-bottom: var(--b);
+}
+
+.ig-row {
+  display: grid; grid-template-columns: repeat(6,1fr);
+  gap: 12px;
+}
+
+.ig-card {
+  background: var(--cream);
+  border: var(--b);
+  padding: 18px 14px;
+  text-align: center;
+  cursor: default;
+  transition: all .2s;
+  position: relative; overflow: hidden;
+}
+.ig-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity .2s;
+}
+.ig-card:nth-child(1)::before { background: rgba(0,169,157,0.12); }
+.ig-card:nth-child(2)::before { background: rgba(245,200,66,0.18); }
+.ig-card:nth-child(3)::before { background: rgba(232,70,10,0.1); }
+.ig-card:nth-child(4)::before { background: rgba(123,191,138,0.15); }
+.ig-card:nth-child(5)::before { background: rgba(36,84,212,0.1); }
+.ig-card:nth-child(6)::before { background: rgba(245,200,66,0.15); }
+.ig-card:hover::before { opacity: 1; }
+.ig-card:hover { transform: translateY(-3px); box-shadow: 4px 4px 0 var(--ink); }
+
+.ig-icon { font-size: 24px; margin-bottom: 8px; }
+.ig-name {
+  font-family: var(--f-block); font-size: 12px;
+  letter-spacing: 0.05em; line-height: 1.2;
+}
+.ig-tag {
+  font-family: var(--f-mono); font-size: 9px;
+  color: var(--ink2); margin-top: 5px;
+  letter-spacing: 0.07em;
+}
+
+/* ════════════════════════════════════════════════
+   DISPOSITIONS — sage / peach backgrounds
+════════════════════════════════════════════════ */
+#dispositions {
+  border-bottom: var(--bt);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.disp-col {
+  padding: 56px 40px;
+  border-right: var(--bt);
+}
+.disp-col:last-child { border-right: none; }
+.disp-col:nth-child(1) { background: var(--mintbg); }
+.disp-col:nth-child(2) { background: var(--peach); }
+.disp-col:nth-child(3) { background: var(--bluebg); }
+
+.disp-eyebrow {
+  font-family: var(--f-mono); font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink2); margin-bottom: 16px;
+}
+.disp-h3 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(26px, 2.5vw, 38px);
+  line-height: 1.0; letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+.disp-list {
+  list-style: none; display: flex;
+  flex-direction: column; gap: 14px;
+}
+.disp-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-family: var(--f-mono); font-size: 13px;
+  line-height: 1.55; color: var(--ink);
+}
+.disp-list li .disp-bullet {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; flex-shrink: 0; margin-top: 1px;
+  font-family: var(--f-block); font-weight: 900;
+}
+
+/* ════════════════════════════════════════════════
+   WHO WE SERVE — rust bg bright
+════════════════════════════════════════════════ */
+#audience {
+  background: var(--rustbg);
+  border-bottom: var(--bt);
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+
+.aud-left {
+  padding: 72px 56px;
+  border-right: var(--bt);
+  background: var(--rust);
+  color: var(--cream);
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  position: relative; overflow: hidden;
+}
+
+/* Decorative concentric arcs */
+.aud-arcs {
+  position: absolute; bottom: -60px; right: -60px;
+  width: 280px; height: 280px;
+  pointer-events: none;
+}
+.aud-arcs circle { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 1.5; }
+
+.aud-pre {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(251,247,238,0.6); margin-bottom: 20px;
+}
+.aud-h2 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 1.05; letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.aud-h2 em { font-style: normal; color: var(--gold); }
+.aud-body {
+  font-family: var(--f-mono); font-size: 13px;
+  line-height: 1.85; color: rgba(251,247,238,0.72);
+  margin-bottom: 32px;
+}
+
+.aud-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.aud-list li {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--f-mono); font-size: 12px;
+  color: var(--cream); padding: 12px 16px;
+  border: 1px solid rgba(251,247,238,0.2);
+  transition: background .2s;
+}
+.aud-list li:hover { background: rgba(251,247,238,0.08); }
+.aud-list li .li-icon { font-size: 18px; }
+
+.aud-right {
+  padding: 72px 56px;
+  background: var(--cream);
+}
+
+.impact-eyebrow {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink2); margin-bottom: 24px;
+}
+.impact-h3 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.0; letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.impact-sub {
+  font-family: var(--f-mono); font-size: 12px;
+  color: var(--ink2); line-height: 1.7; margin-bottom: 36px;
+}
+
+.impact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; border: var(--b);
+}
+.imp-box {
+  padding: 28px 24px;
+  border-right: var(--b); border-bottom: var(--b);
+  transition: background .2s;
+}
+.imp-box:hover { background: var(--gold); }
+.imp-box:nth-child(2n) { border-right: none; }
+.imp-box:nth-last-child(-n+2) { border-bottom: none; }
+.imp-n {
+  font-family: var(--f-block); font-size: 48px;
+  font-weight: 900; line-height: 1;
+  letter-spacing: -0.03em; color: var(--teal);
+}
+.imp-label {
+  font-family: var(--f-mono); font-size: 11px;
+  line-height: 1.55; color: var(--ink2); margin-top: 6px;
+}
+
+/* ════════════════════════════════════════════════
+   TESTIMONIALS — lemon / cream
+════════════════════════════════════════════════ */
+#testimonials {
+  background: var(--lemon);
+  border-bottom: var(--bt);
+  padding: 80px 56px;
+}
+
+.test-top {
+  display: flex; align-items: flex-end;
+  gap: 24px; margin-bottom: 52px;
+  padding-bottom: 24px; border-bottom: var(--b);
+}
+.test-h2 {
+  font-family: var(--f-block); font-size: clamp(40px, 5vw, 70px);
+  font-weight: 900; letter-spacing: -0.01em; line-height: 1;
+}
+.test-rule { flex:1; height:2.5px; background: var(--ink); }
+
+.test-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 0; border: var(--b);
+}
+
+.test-card {
+  background: var(--cream);
+  padding: 40px 32px;
+  border-right: var(--b);
+  position: relative; overflow: hidden;
+  transition: background .2s;
+}
+.test-card:last-child { border-right: none; }
+.test-card:hover { background: var(--goldbg); }
+
+.test-qmark {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: 72px; line-height: 0.7;
+  color: var(--teal); margin-bottom: 18px; display: block;
+}
+.test-text {
+  font-family: var(--f-mono); font-size: 13px;
+  line-height: 1.85; font-style: italic;
+  color: var(--ink2); margin-bottom: 28px;
+}
+.test-author {
+  display: flex; align-items: center; gap: 12px;
+  border-top: var(--b); padding-top: 20px;
+}
+.test-av {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: var(--b); display: flex;
+  align-items: center; justify-content: center;
+  font-family: var(--f-block); font-size: 15px;
+  flex-shrink: 0;
+}
+.test-av-1 { background: var(--teal); color: var(--cream); }
+.test-av-2 { background: var(--rust); color: var(--cream); }
+.test-av-3 { background: var(--blue); color: var(--cream); }
+.test-name {
+  font-family: var(--f-mono); font-size: 11px;
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.test-role { font-family: var(--f-mono); font-size: 10px; color: var(--ink2); margin-top:2px; }
+
+/* ════════════════════════════════════════════════
+   CTA — sage / cream
+════════════════════════════════════════════════ */
+#cta {
+  border-bottom: var(--bt);
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+
+.cta-left {
+  background: var(--teal);
+  padding: 80px 56px;
+  border-right: var(--bt);
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  position: relative; overflow: hidden;
+}
+
+/* Big decorative star */
+.cta-star {
+  position: absolute; bottom: 32px; right: 32px;
+  font-size: 120px; line-height: 1;
+  color: rgba(255,255,255,0.07);
+  font-family: serif; pointer-events: none;
+  animation: spinSlow 30s linear infinite;
+}
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+
+.cta-pre {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65); margin-bottom: 18px;
+}
+.cta-h2 {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(36px, 5vw, 70px);
+  line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--cream);
+}
+.cta-h2 em { font-style: normal; color: var(--gold); }
+.cta-sub {
+  font-family: var(--f-mono); font-size: 13px;
+  line-height: 1.85; color: rgba(255,255,255,0.65);
+  max-width: 380px; margin-top: 20px;
+}
+.cta-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
+
+.btn-cream { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.btn-cream:hover { background: var(--gold); border-color: var(--gold); }
+.btn-ghost-cream { background: transparent; color: var(--cream); border-color: rgba(255,255,255,.35); }
+.btn-ghost-cream:hover { background: rgba(255,255,255,0.1); }
+
+.cta-right {
+  background: var(--cream);
+  padding: 80px 56px;
+}
+.form-title {
+  font-family: var(--f-block); font-size: 26px;
+  letter-spacing: 0.06em; margin-bottom: 36px;
+}
+.form-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 20px; }
+.form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-label {
+  font-family: var(--f-mono); font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink2);
+}
+.form-input, .form-select {
+  background: transparent; border: none;
+  border-bottom: 2px solid var(--ink);
+  padding: 10px 0; font-family: var(--f-mono);
+  font-size: 13.5px; color: var(--ink);
+  outline: none; width: 100%;
+  transition: border-color .2s;
+  appearance: none; -webkit-appearance: none;
+}
+.form-input:focus, .form-select:focus { border-color: var(--teal); }
+.form-input::placeholder { color: rgba(20,20,20,0.3); }
+
+.form-submit {
+  margin-top: 28px; width: 100%;
+  background: var(--ink); color: var(--cream);
+  border: var(--b); padding: 14px 28px;
+  font-family: var(--f-mono); font-size: 12px;
+  font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; cursor: pointer;
+  transition: background .18s, color .18s;
+}
+.form-submit:hover { background: var(--teal); border-color: var(--teal); }
+
+/* ════════════════════════════════════════════════
+   FOOTER — gold bg (fully bright)
+════════════════════════════════════════════════ */
+footer {
+  background: var(--gold);
+  border-top: var(--bt);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  border-bottom: var(--b);
+}
+.f-col {
+  padding: 52px 40px;
+  border-right: var(--b);
+}
+.f-col:last-child { border-right: none; }
+
+.f-brand {
+  font-family: var(--f-block); font-size: 22px;
+  font-weight: 900; letter-spacing: 0.1em;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 14px;
+}
+.f-brand-mark {
+  width: 28px; height: 28px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.f-brand-mark::after {
+  content: ''; width: 12px; height: 12px;
+  border: 1.5px solid var(--teal); border-radius: 50%;
+}
+.f-tagline {
+  font-family: var(--f-mono); font-size: 11px;
+  line-height: 1.8; color: var(--ink2); margin-bottom: 20px;
+}
+.f-badge {
+  font-family: var(--f-mono); font-size: 9px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: var(--b); padding: 6px 10px;
+  display: inline-block; color: var(--ink);
+}
+
+.f-col-title {
+  font-family: var(--f-mono); font-size: 9px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink2); margin-bottom: 18px;
+  border-bottom: var(--b); padding-bottom: 12px;
+}
+.f-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.f-links a {
+  font-family: var(--f-mono); font-size: 12px;
+  color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color .18s;
+}
+.f-links a:hover { color: var(--rust); }
+.f-links a::before { content: '→'; font-size: 10px; opacity: .4; }
+
+.footer-bottom {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+}
+.f-copy {
+  font-family: var(--f-mono); font-size: 10px;
+  color: var(--ink2); letter-spacing: 0.06em;
+}
+.f-legal { display: flex; gap: 20px; }
+.f-legal a {
+  font-family: var(--f-mono); font-size: 10px;
+  color: var(--ink2); text-decoration: none;
+  transition: color .18s;
+}
+.f-legal a:hover { color: var(--ink); }
+
+/* ════════════════════════════════════════════════
+   MOBILE NAV — hamburger + drawer
+════════════════════════════════════════════════ */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+  margin-left: 12px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px; height: 2.5px;
+  background: var(--ink);
+  transition: all .25s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: 58px; left: 0; right: 0;
+  background: var(--gold);
+  border-bottom: var(--bt);
+  z-index: 799;
+  flex-direction: column;
+  padding: 0;
+}
+.nav-drawer.open { display: flex; }
+.nav-drawer a {
+  display: block;
+  padding: 16px 24px;
+  font-family: var(--f-mono); font-size: 12px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid rgba(20,20,20,0.12);
+  transition: background .15s;
+}
+.nav-drawer a:hover { background: rgba(20,20,20,0.07); }
+
+/* ════════════════════════════════════════════════
+   FAQ SECTION
+════════════════════════════════════════════════ */
+#faq {
+  background: var(--mintbg);
+  border-bottom: var(--bt);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+.faq-left {
+  background: var(--sage);
+  border-right: var(--bt);
+  padding: 64px 36px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  position: relative; overflow: hidden;
+}
+.faq-left-bg {
+  position: absolute; bottom: -10px; right: -8px;
+  font-family: var(--f-block); font-size: 140px;
+  font-weight: 900; color: rgba(20,20,20,0.07);
+  line-height: 1; pointer-events: none;
+}
+.faq-left-label {
+  font-family: var(--f-block); font-size: 12px;
+  font-weight: 900; letter-spacing: 0.15em;
+  color: var(--ink); border: var(--b);
+  padding: 6px 12px; width: fit-content;
+}
+.faq-left-title {
+  font-family: var(--f-display);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1.05; letter-spacing: -0.02em;
+}
+.faq-left-sub {
+  font-family: var(--f-mono); font-size: 12px;
+  line-height: 1.75; color: var(--ink2);
+  margin-top: 14px;
+}
+.faq-right {
+  padding: 64px 52px;
+}
+.faq-item {
+  border-bottom: var(--b);
+}
+.faq-btn {
+  width: 100%; text-align: left;
+  background: none; border: none;
+  padding: 20px 0;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 16px;
+  font-family: var(--f-mono); font-size: 13.5px;
+  font-weight: 700; color: var(--ink);
+  cursor: pointer; transition: color .18s;
+}
+.faq-btn:hover { color: var(--teal); }
+.faq-icon {
+  font-size: 22px; font-weight: 300;
+  color: var(--ink2); transition: transform .3s;
+  flex-shrink: 0; line-height: 1;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--teal); }
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height .4s ease;
+}
+.faq-answer-inner {
+  padding-bottom: 20px;
+  font-family: var(--f-mono); font-size: 13px;
+  line-height: 1.85; color: var(--ink2);
+}
+.faq-item.open .faq-answer { max-height: 300px; }
+
+/* ════════════════════════════════════════════════
+   PRINT STYLES
+════════════════════════════════════════════════ */
+@media print {
+  nav, .hero-right, .marquee-strip,
+  .cta-star, .about-left-bg, .day-bg-n,
+  .hero-bg-letter, .aud-arcs, footer,
+  #cta .cta-left, .form-submit,
+  .hero-chip, .o-ring, .o-dot { display: none !important; }
+
+  body { background: #fff !important; color: #000 !important; }
+  #hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { border: none; padding: 24px 0; }
+  #about { grid-template-columns: 1fr; }
+  .about-left { border: none; padding: 24px 0; }
+  .days-grid { grid-template-columns: repeat(5, 1fr); }
+  .reveal, .reveal-left, .reveal-scale { opacity: 1 !important; transform: none !important; }
+  section { break-inside: avoid; page-break-inside: avoid; }
+}
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE — 3 tiers
+   Layout only. Zero colour/font/content changes.
+════════════════════════════════════════════════ */
+
+/* ── LAPTOP  ≤ 1280px ─────────────────────────── */
+@media screen and (max-width: 1280px) {
+  nav { padding: 0 24px; }
+  .hero-left { padding: 56px 40px 48px; }
+  #about { grid-template-columns: 280px 1fr; }
+  .about-right { padding: 56px 40px; }
+  #program { padding: 72px 40px; }
+  .program-header { grid-template-columns: 1fr 280px; gap: 28px; }
+  .aud-left  { padding: 60px 40px; }
+  .aud-right { padding: 60px 40px; }
+  #testimonials { padding: 72px 40px; }
+  .cta-left  { padding: 64px 40px; }
+  .cta-right { padding: 64px 40px; }
+  .footer-main { grid-template-columns: 240px 1fr 1fr 1fr; }
+  .f-col { padding: 44px 28px; }
+  .footer-bottom { padding: 16px 28px; }
+  #faq { grid-template-columns: 260px 1fr; }
+  .faq-right { padding: 56px 40px; }
+}
+
+/* ── TABLET  ≤ 1024px ─────────────────────────── */
+@media screen and (max-width: 1024px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+
+  #hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: auto;
+  }
+  .hero-left {
+    grid-column: 1; grid-row: 1;
+    padding: 52px 32px 44px;
+    border-right: none; border-bottom: var(--bt);
+  }
+  .hero-right { grid-column: 1; grid-row: 2; min-height: 340px; }
+  .marquee-strip { grid-column: 1; grid-row: 3; border-right: none; border-top: var(--bt); }
+
+  #about { grid-template-columns: 1fr; }
+  .about-left { border-right: none; border-bottom: var(--bt); padding: 48px 32px; }
+  .about-right { padding: 48px 32px; gap: 36px; }
+  .about-body-wrap { grid-template-columns: 1fr; gap: 28px; }
+
+  #program { padding: 60px 32px; }
+  .program-header { grid-template-columns: 1fr; gap: 20px; margin-bottom: 40px; padding-bottom: 32px; }
+  .days-grid { grid-template-columns: repeat(3, 1fr); }
+  .day-col:nth-child(3) { border-right: none; }
+  .day-col:nth-child(4) { border-top: var(--b); border-right: var(--b); }
+  .day-col:nth-child(5) { border-top: var(--b); border-right: none; }
+  .ig-row { grid-template-columns: repeat(3, 1fr); }
+
+  #dispositions { grid-template-columns: 1fr; }
+  .disp-col { border-right: none; border-bottom: var(--bt); padding: 44px 32px; }
+  .disp-col:last-child { border-bottom: none; }
+
+  #audience { grid-template-columns: 1fr; }
+  .aud-left { border-right: none; border-bottom: var(--bt); padding: 52px 32px; }
+  .aud-right { padding: 52px 32px; }
+
+  #testimonials { padding: 60px 32px; }
+  .test-grid { grid-template-columns: 1fr 1fr; }
+  .test-card:nth-child(2) { border-right: none; }
+  .test-card:nth-child(3) { grid-column: 1 / -1; border-right: none; border-top: var(--b); }
+
+  #faq { grid-template-columns: 1fr; }
+  .faq-left { border-right: none; border-bottom: var(--bt); padding: 48px 32px; }
+  .faq-right { padding: 48px 32px; }
+
+  #cta { grid-template-columns: 1fr; }
+  .cta-left { border-right: none; border-bottom: var(--bt); padding: 56px 32px; }
+  .cta-right { padding: 56px 32px; }
+
+  .footer-main { grid-template-columns: 1fr 1fr; }
+  .f-col { padding: 40px 28px; border-bottom: var(--b); }
+  .f-col:nth-child(2n) { border-right: none; }
+  .footer-bottom { padding: 16px 28px; }
+}
+
+/* ── PHONE  ≤ 767px ───────────────────────────── */
+@media screen and (max-width: 767px) {
+  nav { padding: 0 16px; height: 52px; }
+  .nav-cta { padding: 0 12px; font-size: 10px; height: 52px; }
+  .nav-drawer { top: 52px; }
+
+  #hero { margin-top: 52px; }
+  .hero-left { padding: 40px 20px 36px; }
+  .orbit-wrap { width: 220px; height: 220px; }
+  .o-ring-1   { width: 68px;  height: 68px;  }
+  .o-ring-2   { width: 136px; height: 136px; }
+  .o-ring-3   { width: 210px; height: 210px; }
+  .h-stat     { padding: 12px 14px; }
+  .h-stat-n   { font-size: 26px; }
+
+  .about-left  { padding: 40px 20px; }
+  .about-right { padding: 36px 20px; }
+  .about-values { grid-template-columns: 1fr 1fr; }
+
+  #program { padding: 48px 20px; }
+  .ig-wrap  { margin-top: 40px; }
+  .days-grid { grid-template-columns: 1fr; }
+  .day-col { border-right: none; border-bottom: var(--b); padding: 28px 20px; }
+  .day-col:last-child { border-bottom: none; }
+  .day-col:nth-child(3) { border-right: none; border-top: none; }
+  .day-col:nth-child(4) { border-right: none; border-top: none; }
+  .day-col:nth-child(5) { border-right: none; border-top: none; }
+  .ig-row { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+
+  .disp-col { padding: 36px 20px; }
+
+  .aud-left  { padding: 44px 20px; }
+  .aud-right { padding: 44px 20px; }
+  .impact-grid { grid-template-columns: 1fr 1fr; }
+
+  #testimonials { padding: 48px 20px; }
+  .test-grid { grid-template-columns: 1fr; }
+  .test-card { border-right: none; border-bottom: var(--b); }
+  .test-card:nth-child(2) { border-right: none; }
+  .test-card:nth-child(3) { grid-column: auto; border-top: none; }
+  .test-card:last-child   { border-bottom: none; }
+
+  .faq-left  { padding: 40px 20px; }
+  .faq-right { padding: 40px 20px; }
+
+  .cta-left  { padding: 44px 20px; }
+  .cta-right { padding: 44px 20px; }
+  .form-2col { grid-template-columns: 1fr; gap: 0; }
+
+  .footer-main { grid-template-columns: 1fr; }
+  .f-col { border-right: none; border-bottom: var(--b); padding: 36px 20px; }
+  .f-col:nth-child(2n) { border-right: none; }
+  .f-col:last-child    { border-bottom: none; }
+  .footer-bottom {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-orbit">
+      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="15" r="13.5" stroke="#141414" stroke-width="1.5"/>
+        <circle cx="15" cy="15" r="8"    stroke="#141414" stroke-width="1.5"/>
+        <circle cx="15" cy="15" r="3"    fill="#141414"/>
+        <circle cx="15" cy="1.5"  r="2.5" fill="#E8460A"/>
+        <circle cx="23.5" cy="23.5" r="2" fill="#00A99D"/>
+      </svg>
+    </div>
+    CORE
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#program">Program</a></li>
+    <li><a href="#audience">Who We Serve</a></li>
+    <li><a href="#testimonials">Stories</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#cta">Get Involved</a></li>
+  </ul>
+
+  <button class="nav-cta" aria-label="Partner with Core — scroll to contact form" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+    Partner With Us →
+  </button>
+  <!-- Mobile hamburger -->
+  <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav drawer -->
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
+  <a href="#about" onclick="closeDrawer()">About</a>
+  <a href="#program" onclick="closeDrawer()">Program</a>
+  <a href="#audience" onclick="closeDrawer()">Who We Serve</a>
+  <a href="#testimonials" onclick="closeDrawer()">Stories</a>
+  <a href="#faq" onclick="closeDrawer()">FAQ</a>
+  <a href="#cta" onclick="closeDrawer()">Get Involved</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<main id="main-content">
+<section id="hero">
+  <div class="hero-bg-letter" aria-hidden="true">C</div>
+
+  <div class="hero-left">
+    <div class="hero-tag">Inquiry-Based Learning · Ahmedabad, India</div>
+    <h1 class="hero-h1">
+      <span class="word-learning">Learning</span><br>
+      that <span class="word-fits">fits</span><br>
+      the child.
+    </h1>
+    <p class="hero-desc">Core is a 5-day immersive learning space where every child's curiosity becomes the curriculum. Holistic. Personalised. Radically human. Free for government school students.</p>
+    <div class="hero-actions">
+      <a href="#program" class="btn btn-fill">See the Program →</a>
+      <a href="#cta" class="btn btn-gold">Enroll Now</a>
+    </div>
+  </div>
+
+  <div class="hero-right" aria-hidden="true">
+    <div class="hero-orbit-display">
+      <div class="hero-chip chip-1">✦ Inquiry First</div>
+      <div class="hero-chip chip-2">NEP 2020 Aligned</div>
+      <div class="hero-chip chip-3">Child-Led</div>
+      <div class="hero-chip chip-4">₹0 for Govt. Students</div>
+
+      <div class="orbit-wrap">
+        <div class="o-ring o-ring-1"><div class="o-dot o-dot-gold"></div></div>
+        <div class="o-ring o-ring-2"><div class="o-dot o-dot-rust"></div></div>
+        <div class="o-ring o-ring-3"><div class="o-dot o-dot-cream"></div></div>
+        <div class="o-center">
+          <div class="o-center-label">IBL<br>CORE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="h-stat">
+        <div class="h-stat-n">5</div>
+        <div class="h-stat-l">Day Program</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-n">6</div>
+        <div class="h-stat-l">Interest Groups</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-n">₹0</div>
+        <div class="h-stat-l">For Govt. Students</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <div class="marquee-item">Inquiry First</div>
+      <div class="marquee-item">Child-Led Learning</div>
+      <div class="marquee-item">Holistic Growth</div>
+      <div class="marquee-item">No Rote Learning</div>
+      <div class="marquee-item">Every Child Belongs</div>
+      <div class="marquee-item">NEP 2020 Aligned</div>
+      <div class="marquee-item">5E Instructional Model</div>
+      <div class="marquee-item">Registered NGO</div>
+      <!-- loop duplicate -->
+      <div class="marquee-item">Inquiry First</div>
+      <div class="marquee-item">Child-Led Learning</div>
+      <div class="marquee-item">Holistic Growth</div>
+      <div class="marquee-item">No Rote Learning</div>
+      <div class="marquee-item">Every Child Belongs</div>
+      <div class="marquee-item">NEP 2020 Aligned</div>
+      <div class="marquee-item">5E Instructional Model</div>
+      <div class="marquee-item">Registered NGO</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-left reveal-left">
+    <div>
+      <div class="about-num">01 / PHILOSOPHY</div>
+    </div>
+    <h2 class="about-left-title">Why<br>Core<br>Exists</h2>
+    <div class="about-left-bg">01</div>
+  </div>
+
+  <div class="about-right reveal">
+    <blockquote class="about-quote">
+      "The child is not a vessel to fill — but a fire to kindle."
+    </blockquote>
+
+    <div class="about-body-wrap">
+      <div>
+        <p class="sec-body">Most classrooms measure what children <strong>remember</strong>. Core measures what they <strong>discover</strong>. We run a 5-day inquiry-based learning program that replaces passive instruction with genuine exploration, personal research, and collaborative sense-making.</p>
+        <p class="sec-body" style="margin-top:16px">Rooted in the <strong>5E Instructional Model</strong> and aligned with <strong>NCF 2023 / NEP 2020</strong>, Core is a Public Charitable Trust that cross-subsidises access — premium schools fund free seats for government school students.</p>
+        <p class="sec-body" style="margin-top:16px">We are not a school. Not a tuition centre. We are a <strong style="color:var(--teal)">learning space</strong> — and the difference matters.</p>
+      </div>
+
+      <div class="about-values">
+        <div class="val-item">
+          <div class="val-icon">🔭</div>
+          <div class="val-name">INQUIRY</div>
+          <div class="val-desc">Questions before answers. Always.</div>
+        </div>
+        <div class="val-item">
+          <div class="val-icon">🎨</div>
+          <div class="val-name">HOLISTIC</div>
+          <div class="val-desc">Cognitive, social and creative growth together.</div>
+        </div>
+        <div class="val-item">
+          <div class="val-icon">🌱</div>
+          <div class="val-name">INCLUSIVE</div>
+          <div class="val-desc">Cross-subsidy: no child left out.</div>
+        </div>
+        <div class="val-item">
+          <div class="val-icon">⚡</div>
+          <div class="val-name">PERSONAL</div>
+          <div class="val-desc">Every learner chooses their own path.</div>
+        </div>
+        <div class="val-item">
+          <div class="val-icon">📜</div>
+          <div class="val-name">COMPLIANT</div>
+          <div class="val-desc">NEP 2020, RTE, POCSO & DPDP aligned.</div>
+        </div>
+        <div class="val-item">
+          <div class="val-icon">🤝</div>
+          <div class="val-name">TRUSTED</div>
+          <div class="val-desc">Registered under Bombay Public Trusts Act.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROGRAM ═══ -->
+<section id="program">
+  <div class="program-header reveal">
+    <h2 class="program-h2">The <em>5-Day</em><br>Learning Arc</h2>
+    <p class="program-desc">Each week is a complete inquiry cycle. Children move from provocation to publication — as real researchers, creators, and thinkers. Facilitated, never instructed.</p>
+  </div>
+
+  <div class="days-grid reveal">
+    <div class="day-col">
+      <div class="day-bg-n">1</div>
+      <div class="day-color-bar" style="background:var(--gold)"></div>
+      <div class="day-weekday">Monday</div>
+      <div class="day-name">PROVOCATION</div>
+      <div class="day-text">A hook, a mystery, a contradiction. Children encounter something that demands explanation and choose their own question to pursue.</div>
+    </div>
+    <div class="day-col">
+      <div class="day-bg-n">2</div>
+      <div class="day-color-bar" style="background:var(--teal)"></div>
+      <div class="day-weekday">Tuesday</div>
+      <div class="day-name">EXPLORATION</div>
+      <div class="day-text">Hands-on investigation, field observation, experiments, and research. Facilitated — never instructed.</div>
+    </div>
+    <div class="day-col">
+      <div class="day-bg-n">3</div>
+      <div class="day-color-bar" style="background:var(--rust)"></div>
+      <div class="day-weekday">Wednesday</div>
+      <div class="day-name">EXPLANATION</div>
+      <div class="day-text">Children build meaning from their findings. Connections are made. Vocabulary is owned, not borrowed.</div>
+    </div>
+    <div class="day-col">
+      <div class="day-bg-n">4</div>
+      <div class="day-color-bar" style="background:var(--sage)"></div>
+      <div class="day-weekday">Thursday</div>
+      <div class="day-name">ELABORATION</div>
+      <div class="day-text">Extend thinking. Cross-disciplinary links. New challenges that deepen, not just broaden, understanding.</div>
+    </div>
+    <div class="day-col">
+      <div class="day-bg-n">5</div>
+      <div class="day-color-bar" style="background:var(--blue)"></div>
+      <div class="day-weekday">Friday</div>
+      <div class="day-name">SHARING</div>
+      <div class="day-text">Every child presents. Peer reflection, self-assessment, celebration of the thinking process — not just the product.</div>
+    </div>
+  </div>
+
+  <div class="ig-wrap reveal">
+    <div class="ig-label">Six Interest Groups — children choose their inquiry lens</div>
+    <div class="ig-row">
+      <div class="ig-card">
+        <div class="ig-icon">🔬</div>
+        <div class="ig-name">Science &amp; Nature</div>
+        <div class="ig-tag">Biology · Physics · Ecology</div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-icon">🎨</div>
+        <div class="ig-name">Arts &amp; Design</div>
+        <div class="ig-tag">Visual · Craft · Architecture</div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-icon">📖</div>
+        <div class="ig-name">Stories &amp; Language</div>
+        <div class="ig-tag">Writing · Oral · Media</div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-icon">🌍</div>
+        <div class="ig-name">Society &amp; People</div>
+        <div class="ig-tag">History · Culture · Ethics</div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-icon">⚙️</div>
+        <div class="ig-name">Making &amp; Tech</div>
+        <div class="ig-tag">Engineering · Coding · Design</div>
+      </div>
+      <div class="ig-card">
+        <div class="ig-icon">🧮</div>
+        <div class="ig-name">Maths &amp; Logic</div>
+        <div class="ig-tag">Patterns · Reasoning · Data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DISPOSITIONS ═══ -->
+<section id="dispositions">
+  <div class="disp-col reveal">
+    <div class="disp-eyebrow">02 / Core Dispositions</div>
+    <h3 class="disp-h3">Six inner<br>postures we<br>cultivate</h3>
+    <p class="sec-body" style="font-size:12px">We don't just teach content. We grow the habits of mind that make a lifelong learner.</p>
+  </div>
+  <div class="disp-col reveal" style="transition-delay:.1s">
+    <ul class="disp-list">
+      <li><span class="disp-bullet" style="background:var(--gold)">1</span><span><strong>Curiosity</strong> — asking before assuming. The question matters more than the answer.</span></li>
+      <li><span class="disp-bullet" style="background:var(--teal);color:#fff">2</span><span><strong>Courage</strong> — sharing half-formed ideas. Uncertainty is the beginning of thinking.</span></li>
+      <li><span class="disp-bullet" style="background:var(--rust);color:#fff">3</span><span><strong>Collaboration</strong> — thinking is a social act. Ideas grow in dialogue.</span></li>
+    </ul>
+  </div>
+  <div class="disp-col reveal" style="transition-delay:.2s">
+    <ul class="disp-list">
+      <li><span class="disp-bullet" style="background:var(--sage)">4</span><span><strong>Reflection</strong> — pausing to make meaning. What changed in my thinking?</span></li>
+      <li><span class="disp-bullet" style="background:var(--blue);color:#fff">5</span><span><strong>Perseverance</strong> — sitting with difficulty. Hard problems deserve time.</span></li>
+      <li><span class="disp-bullet" style="background:var(--lemon)">6</span><span><strong>Empathy</strong> — seeing through other eyes. Other perspectives complete our own.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ WHO WE SERVE ═══ -->
+<section id="audience">
+  <div class="aud-left reveal-left">
+    <svg class="aud-arcs" viewBox="0 0 280 280">
+      <circle cx="280" cy="280" r="60"/>
+      <circle cx="280" cy="280" r="110"/>
+      <circle cx="280" cy="280" r="165"/>
+      <circle cx="280" cy="280" r="225"/>
+    </svg>
+
+    <div>
+      <p class="aud-pre">03 / Who We Serve</p>
+      <h2 class="aud-h2">Built for<br><em>every</em> child.<br>Not just<br>some.</h2>
+      <p class="aud-body">Core's cross-subsidy model means a child from a municipal school in Ahmedabad sits in the same learning space as a child from a premium school — and both thrive.</p>
+    </div>
+
+    <ul class="aud-list">
+      <li><span class="li-icon">🏫</span> Government & municipal school students at <strong>zero cost</strong></li>
+      <li><span class="li-icon">🎓</span> CBSE / private school students at a nominal program fee</li>
+      <li><span class="li-icon">🏢</span> Schools seeking NEP-aligned experiential programs</li>
+    </ul>
+  </div>
+
+  <div class="aud-right reveal">
+    <p class="impact-eyebrow">04 / Impact Numbers</p>
+    <h3 class="impact-h3">The numbers<br>that matter.</h3>
+    <p class="impact-sub">Every figure represents a child who asked a question no one told them to ask.</p>
+
+    <div class="impact-grid">
+      <div class="imp-box">
+        <div class="imp-n">5</div>
+        <div class="imp-label">Day immersive<br>learning cycle</div>
+      </div>
+      <div class="imp-box">
+        <div class="imp-n">6</div>
+        <div class="imp-label">Unique Interest<br>Groups per program</div>
+      </div>
+      <div class="imp-box">
+        <div class="imp-n">2</div>
+        <div class="imp-label">School tiers served<br>simultaneously</div>
+      </div>
+      <div class="imp-box">
+        <div class="imp-n">₹0</div>
+        <div class="imp-label">Cost for underserved<br>students</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials">
+  <div class="test-top reveal">
+    <h2 class="test-h2">WHAT THEY SAY</h2>
+    <div class="test-rule"></div>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <span class="test-qmark">"</span>
+      <p class="test-text">My daughter came home on Monday talking about tides at 9 PM. She had never asked a science question at home before Core. That is the only testimonial I need to give.</p>
+      <div class="test-author">
+        <div class="test-av test-av-1">P</div>
+        <div>
+          <div class="test-name">Priya Mehta</div>
+          <div class="test-role">Parent · Grade 5 learner</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal" style="transition-delay:.1s">
+      <span class="test-qmark">"</span>
+      <p class="test-text">I have been teaching for 14 years. Core's facilitation model reminded me why I became a teacher. It put children back at the centre of the room.</p>
+      <div class="test-author">
+        <div class="test-av test-av-2">R</div>
+        <div>
+          <div class="test-name">Ramesh Tiwari</div>
+          <div class="test-role">Primary Teacher · Govt. School, Ahmedabad</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal" style="transition-delay:.2s">
+      <span class="test-qmark">"</span>
+      <p class="test-text">Partnering with Core was the easiest decision we made this academic year. Their alignment with NEP 2020 made the case itself. Our students came back changed.</p>
+      <div class="test-author">
+        <div class="test-av test-av-3">S</div>
+        <div>
+          <div class="test-name">Shalini Desai</div>
+          <div class="test-role">Principal · CBSE School, Ahmedabad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="faq-left reveal-left">
+    <div>
+      <div class="faq-left-label">05 / FAQ</div>
+    </div>
+    <div>
+      <h2 class="faq-left-title">Common<br>Questions</h2>
+      <p class="faq-left-sub">Everything families and school coordinators ask before saying yes.</p>
+    </div>
+    <div class="faq-left-bg">?</div>
+  </div>
+  <div class="faq-right reveal">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        Will my child still cover curriculum content?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">Yes. Every Core inquiry unit is mapped to learning outcomes aligned with the National Curriculum Framework (NCF 2023) and NEP 2020. Activities connect to Science, Mathematics, Social Science, Languages, or Arts outcomes as appropriate. You receive a learning outcomes summary with the assessment report within 14 days of the program.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        How is my child assessed?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">Assessment is portfolio-based using 6 dispositions: Curiosity, Resilience, Collaboration, Communication, Critical Thinking, and Reflection — aligned with NEP 2020's competency-based framework. You receive a written report with specific, observed evidence for every rating within 14 days of the program.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        Is it really free for government school students?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">Yes, completely. Core's cross-subsidy model means premium and CBSE school fees fund seats for government and municipal school students. No hidden costs, no materials fees, no conditions. The only requirement is attendance for all 5 days.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        What if my child struggles without direct instruction?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">This is expected and completely normal. Our facilitators are trained to scaffold carefully without removing ownership. Every student receives at least one deliberate 1:1 check-in daily. Students also have a structured journal to guide their thinking at every step of the inquiry arc.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        Can families visit during the week?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">Families are warmly invited to the Day 5 Sharing Session on Friday. Days 1–4 remain a dedicated student space to protect the inquiry environment. For any concerns mid-week, contact the Program Coordinator — not the facilitator — so the learning space remains uninterrupted.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">
+        How does a school partner with Core?
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">Send an inquiry using the form below or email us directly. We will arrange a call to understand your school's context, agree on dates and student cohort size, and share a simple Service Agreement. Most schools are onboarded within 2–3 weeks of first contact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="cta-left reveal-left">
+    <div class="cta-star">✦</div>
+    <div>
+      <p class="cta-pre">05 / Get Involved</p>
+      <h2 class="cta-h2">Ready to bring<br><em>Core</em> to your<br>school?</h2>
+      <p class="cta-sub">Whether you're a school principal, a parent, a donor, or an aspiring facilitator — there is a place for you in this work.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="mailto:Corethelearningspace@gmail.com" class="btn btn-cream">Email Us →</a>
+      <a href="#" class="btn btn-ghost-cream">Download Brochure</a>
+    </div>
+  </div>
+
+  <div class="cta-right reveal">
+    <h3 class="form-title">SEND AN INQUIRY</h3>
+    <form id="inquiryForm" novalidate>
+    <div class="form-2col">
+      <div class="form-row">
+        <label class="form-label" for="firstName">First Name</label>
+        <input class="form-input" id="firstName" name="firstName" type="text" placeholder="Arjun" required autocomplete="given-name">
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="lastName">Last Name</label>
+        <input class="form-input" id="lastName" name="lastName" type="text" placeholder="Shah" required autocomplete="family-name">
+      </div>
+    </div>
+    <div class="form-row">
+      <label class="form-label" for="email">Email Address</label>
+      <input class="form-input" id="email" name="email" type="email" placeholder="you@school.edu.in" required autocomplete="email">
+    </div>
+    <div class="form-row">
+      <label class="form-label" for="role">I am a…</label>
+      <select class="form-select" id="role" name="role" required>
+        <option value="" disabled selected>Select your role</option>
+        <option value="principal">School Principal / Coordinator</option>
+        <option value="parent">Parent</option>
+        <option value="donor">Donor / Funder</option>
+        <option value="facilitator">Aspiring Facilitator</option>
+        <option value="ngo">NGO / Partner Organisation</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label class="form-label" for="message">Message</label>
+      <input class="form-input" id="message" name="message" type="text" placeholder="Tell us about your context…">
+    </div>
+    <button class="form-submit" id="submitBtn" type="submit">Send Inquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-main">
+    <div class="f-col">
+      <div class="f-brand">
+        <div class="f-brand-mark"></div>
+        CORE
+      </div>
+      <p class="f-tagline">The Learning Space.<br>A Public Charitable Trust registered under the Bombay Public Trusts Act, 1950. Ahmedabad, Gujarat.</p>
+      <span class="f-badge">Registered NGO · India</span>
+    </div>
+    <div class="f-col">
+      <div class="f-col-title">Program</div>
+      <ul class="f-links">
+        <li><a href="#program">The 5-Day Arc</a></li>
+        <li><a href="#program">Interest Groups</a></li>
+        <li><a href="#dispositions">Six Dispositions</a></li>
+        <li><a href="#about">Our Philosophy</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <div class="f-col-title">For Schools</div>
+      <ul class="f-links">
+        <li><a href="#cta">Partner With Us</a></li>
+        <li><a href="#audience">Who We Serve</a></li>
+        <li><a href="#">Facilitator Vacancies</a></li>
+        <li><a href="#">Download Brochure</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <div class="f-col-title">Legal & Compliance</div>
+      <ul class="f-links">
+        <li><a href="#">Trust Deed</a></li>
+        <li><a href="#">Privacy Policy (DPDP Act)</a></li>
+        <li><a href="#">POCSO Policy</a></li>
+        <li><a href="#">RTE Compliance</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2024–2026 Core — The Learning Space. All rights reserved.</span>
+    <div class="f-legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ── 1. SCROLL REVEAL ─────────────────────────── */
+const allReveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('up');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+allReveals.forEach(r => revealObserver.observe(r));
+
+/* ── 2. HAMBURGER MENU ────────────────────────── */
+const hamburger = document.getElementById('hamburger');
+const navDrawer  = document.getElementById('navDrawer');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = navDrawer.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+function closeDrawer() {
+  navDrawer.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+}
+
+/* Close drawer on outside click */
+document.addEventListener('click', e => {
+  if (!hamburger.contains(e.target) && !navDrawer.contains(e.target)) {
+    closeDrawer();
+  }
+});
+
+/* ── 3. NAV SCROLL-SPY ────────────────────────── */
+const spySecs  = document.querySelectorAll('section[id]');
+const spyLinks = document.querySelectorAll('.nav-links a');
+
+const spyObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      spyLinks.forEach(a => {
+        a.style.color = '';
+        a.removeAttribute('aria-current');
+      });
+      const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (active) {
+        active.style.color = 'var(--rust)';
+        active.setAttribute('aria-current', 'true');
+      }
+    }
+  });
+}, { rootMargin: '-35% 0px -35% 0px' });
+
+spySecs.forEach(s => spyObserver.observe(s));
+
+/* ── 4. FAQ ACCORDION ─────────────────────────── */
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item   = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+
+    /* Close all others */
+    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+      openItem.classList.remove('open');
+      openItem.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+    });
+
+    /* Toggle clicked */
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* ── 5. FORM — VALIDATION + SUBMISSION ───────── */
+const form      = document.getElementById('inquiryForm');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  /* Client-side validation */
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName  = document.getElementById('lastName').value.trim();
+  const email     = document.getElementById('email').value.trim();
+  const role      = document.getElementById('role').value;
+  const emailRx   = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!firstName || !lastName) {
+    showFormError('Please enter your full name.'); return;
+  }
+  if (!emailRx.test(email)) {
+    showFormError('Please enter a valid email address.'); return;
+  }
+  if (!role) {
+    showFormError('Please select your role.'); return;
+  }
+
+  /* Sending state */
+  submitBtn.textContent = 'Sending…';
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.7';
+
+  /* Submit to Formspree — replace YOUR_FORM_ID with your Formspree endpoint */
+  try {
+    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        firstName, lastName, email, role,
+        message: document.getElementById('message').value.trim()
+      })
+    });
+
+    if (res.ok) {
+      submitBtn.textContent = 'Sent! We\'ll be in touch within 48 hours. ✦';
+      submitBtn.style.background    = 'var(--teal)';
+      submitBtn.style.borderColor   = 'var(--teal)';
+      submitBtn.style.opacity       = '1';
+      form.reset();
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    /* Graceful fallback — mailto */
+    submitBtn.textContent = 'Sent! ✦';
+    submitBtn.style.background  = 'var(--teal)';
+    submitBtn.style.borderColor = 'var(--teal)';
+    submitBtn.style.opacity     = '1';
+    /* Open mailto as fallback if fetch fails */
+    window.location.href =
+      `mailto:Corethelearningspace@gmail.com`
+      + `?subject=Inquiry from ${encodeURIComponent(firstName + ' ' + lastName)}`
+      + `&body=${encodeURIComponent('Role: ' + role + '\n\nMessage: ' + document.getElementById('message').value.trim())}`;
+  }
+
+  setTimeout(() => {
+    submitBtn.textContent   = 'Send Inquiry →';
+    submitBtn.style.background  = '';
+    submitBtn.style.borderColor = '';
+    submitBtn.style.opacity     = '1';
+    submitBtn.disabled = false;
+  }, 5000);
+});
+
+function showFormError(msg) {
+  const existing = form.querySelector('.form-error');
+  if (existing) existing.remove();
+  const el = document.createElement('p');
+  el.className = 'form-error';
+  el.textContent = msg;
+  el.style.cssText = 'font-family:var(--f-mono);font-size:11px;color:var(
